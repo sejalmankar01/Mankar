@@ -1,36 +1,35 @@
 package mavenproject.maven_project;
 
-import java.io.IOException;
 
 import org.openqa.selenium.JavascriptExecutor;
 
 public class Scroll_page extends Dynamic_code{
 
-	public static void main(String[] args)  {
+	public static void main(String[] args)    {
 		launchbrowser("chrome");
-		try {
-			takescreenshot("Browser launch");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		
+		takescreenshot("Browser launch");
+		
 			hiturl("https://www.jeevansathi.com/");
-			try {
+			
 				takescreenshot("jeevansathi webpage");
-			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
+			
 				
 				JavascriptExecutor js=(JavascriptExecutor) driver;
-				js.executeScript("Window.scrollBY(0, 700)");
-				try {
+				js.executeScript("window.scrollBy(0,700)");
+				
 					takescreenshot("after scroll");
-				} catch (IOException e2) {
-					// TODO Auto-generated catch block
-					e2.printStackTrace();
+						
+						
+						
+						
+						js.executeScript("window.scrollBy(0,-700)");
+						takescreenshot("scroll to bottom");
+						js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+						takescreenshot("scroll to bottopm");
+						
+					}
+				
 				}
-			}
-		}
-		
-	}
+			
 
-}
