@@ -1,7 +1,10 @@
 package mavenproject.maven_project;
 
+
+
+
+
 import java.io.File;
-import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.OutputType;
@@ -50,17 +53,14 @@ public class Dynamic_code {
 							FileHandler.copy(Source12, target12);
 						}  
 			          
-			          public static void  screenshot(String ss_name)  {
+			          public static void  screenshot(String ss_name) throws Throwable  {
 			        	  String Projectpath = System.getProperty("user.dir");
 							TakesScreenshot ts4=(TakesScreenshot) driver;
 							 File Source4 = ts4.getScreenshotAs(OutputType.FILE);
 							 File target4 = new File(Projectpath +"\\evidences\\"+ ss_name+".png");
-								try {
+								
 									FileHandler.copy(Source4, target4);
-								} catch (IOException e) {
-									// TODO Auto-generated catch block
-									e.printStackTrace();
-								}
+								
 						
 					}
 		}

@@ -12,7 +12,7 @@ import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 public class Screenshot extends  Dynamic_code{
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Throwable  {
 		 launchbrowser("chrome");
 		
 		 
